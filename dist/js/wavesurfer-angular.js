@@ -47,7 +47,7 @@
                             '</div>',
                 link : function (scope, element) {
                     var id = uniqueId++;
-                    scope.uniqueId = 'waveform_' + id;
+                    scope.uniqueId = (scope.options.id) ? scope.options.id : 'waveform_' + id;
                     scope.wavesurfer = Object.create(WaveSurfer);
                     scope.playing    = false;
                     scope.volume_level = ($window.sessionStorage.audioLevel || 50);
@@ -98,6 +98,8 @@
                     scope.bw = function () {
                         scope.wavesurfer.skipBackward();
                     };
+                    //emit an event if new wafesurfer is created
+                    scope.$emit('wavesurferInit', scope.wavesurfer);
                 }
             };
         });
