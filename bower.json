@@ -1,7 +1,7 @@
 {
   "name": "wavesurfer-angular",
-  "version": "1.0.0-beta",
-  "homepage": "https://github.com/karimfikry/wavesurfer-angular",
+  "version": "1.0.1-beta",
+  "homepage": "https://github.com/aarepuu/wavesurfer-angular.git",
   "description": "Angular.js directive for wavesurfer.fm",
   "main": [
     "dist/js/wavesurfer-angular.js",
